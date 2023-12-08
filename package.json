@@ -1,0 +1,19 @@
+{
+  "name": "my-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^3.38.0",
+    "serverless-offline": "^13.3.0",
+    "serverless-sqs-local": "^1.1.2"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1514.0"
+  }
+}

@@ -1,0 +1,27 @@
+service: serverless-testing
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.hello
+    events:
+       - sqs:
+          arn:
+            Fn::GetAtt:
+              - email-task
+              - Arn   
+
+plugins:
+  - serverless-offline
+  - serverless-sqs-local
+
+custom:
+  sqs:
+    endpoint: http://localhost:9324
+  
+
+
